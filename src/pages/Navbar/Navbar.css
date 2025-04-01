@@ -7,21 +7,20 @@
     position: sticky;
     top: 0;left: 0;right: 0;
     z-index: 9999;
-    transition: all 0.5s ease; /* Transition for padding-top */
-    padding: 15px 0px;
+    transition: all 0.5s ease; 
+    padding:0px 60px;
 }
 .navbar-main.sticky {
+    height: 90px;
     background: var(--color-navigation) !important;
-    padding: 0px 0px !important; 
     transition: all 0.5s ease;
 }
 .navbar-link{
     text-decoration: none !important;
     color: var(--color-offWhite) !important;
-  font-size: 16px !important;
-  padding: 10px !important;
-  transition: all 0.1s ease;
-  cursor: pointer;
+    font-size: 16px !important;
+    padding: 10px !important;
+    cursor: pointer;
 }
 .navbar-list{
     display: flex;
@@ -33,13 +32,43 @@
 .navbar-link.active {
     color: var(--color-white) !important;
     border-bottom: 2px solid var( --color-primary) !important; 
-    
   }
-  
-  
 
 .contact-button{
     padding: 8px 20px !important;
     background-color: var(--color-primary) !important;
     color: var(--color-white) !important;
 }
+
+.menu-icon{
+    display: none !important;
+}
+
+.mobile-menu {
+    background-color: var(--color-navigation) !important;
+    width:50vw !important;
+    height: 100vh !important;
+    padding: 20px !important;
+}
+
+.close-button {
+    color: var(--color-white) !important;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .navbar-list {
+        display: none !important;
+    }
+    .menu-icon {
+        display: block !important;
+        color: var(--color-white) !important;
+    }
+    .navbar-link{
+        color: var(--color-white) !important;
+    }
+   
+   
+}
+
