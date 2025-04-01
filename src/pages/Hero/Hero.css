@@ -1,0 +1,23 @@
+.hero-main{
+    height: 100vh;
+    display: flex;
+    justify-content: space-between  ;
+    margin: 30px 0px;
+}
+.hero-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+    margin: 30px 0px;
+}
+.hero-text-container h1{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 38px;
+}
+.hero-text-container p{
+    color: #FFFFFFCC;
+    width: 86%;
+    text-align: justify;
+    font-size: 18px;
+}

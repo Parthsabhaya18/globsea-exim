@@ -1,0 +1,45 @@
+
+.navbar-main{
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;left: 0;right: 0;
+    z-index: 9999;
+    transition: all 0.5s ease; /* Transition for padding-top */
+    padding: 15px 0px;
+}
+.navbar-main.sticky {
+    background: var(--color-navigation) !important;
+    padding: 0px 0px !important; 
+    transition: all 0.5s ease;
+}
+.navbar-link{
+    text-decoration: none !important;
+    color: var(--color-offWhite) !important;
+  font-size: 16px !important;
+  padding: 10px !important;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+.navbar-list{
+    display: flex;
+    gap: 20px;
+    font-size: 16px;
+    font-family:var(--font-primary) ;
+    
+}
+.navbar-link.active {
+    color: var(--color-white) !important;
+    border-bottom: 2px solid var( --color-primary) !important; 
+    
+  }
+  
+  
+
+.contact-button{
+    padding: 8px 20px !important;
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+}
