@@ -1,5 +1,6 @@
 
+ import logo from '../../public/assests/logo.png';
  const Images = {
-        LOGO : require('../../public/assests/logo.png'),
+        LOGO : logo,
 }
 export default Images;
