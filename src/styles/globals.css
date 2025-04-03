@@ -1,21 +1,29 @@
 @import "tailwindcss";
 
 :root {
-    --color-default: #0a0d13;
-    --color-primary: #0d42ff;
-    --color-secondary: #0e1d34;
-    --color-navigation: #0e1d34E6;
-    --color-white: #FFFFFF;
-    --color-offWhite: #FFFFFF99;
+    --color-default: #0a0d13 !important;
+    --color-primary: #0d42ff !important;
+    --color-secondary: #0e1d34 !important;
+    --color-navigation: #0e1d34E6 !important;
+    --color-white: #FFFFFF !important;
+    --color-offWhite: #FFFFFF99 !important;
 
-    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-primary: "Inter", sans-serif;
-    --font-secondary: "Poppins", sans-serif;
+    --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    --font-primary: "Inter", sans-serif !important;
+    --font-secondary: "Poppins", sans-serif !important;
+
+    --font-ex-small: 12px !important;
+    --font-md-small: 14px !important;
+    --font-lg-small: 16px !important;
+    --font-medium: 16px !important;
+    --font-large: 18px !important;
+    --font-ex-large: 22px !important;
 
     
   }
 
 body {
+    width: 100vw;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;

@@ -1,0 +1,5 @@
+export const translate = {
+    GLOBSEA_EXIM: "GLOBSEA EXIM",
+    DESCRIPTION: `Welcome to JV & Sons Export, your trusted partner for all your export needs. With extensive experience and a commitment to quality, we offer unmatched solutions for global businesses. Benefit from our vast network, strategic partnerships, and comprehensive services, making us your top choice for international exports. Explore our range of export services and let us help you achieve your export goals.`,
+    DESCRIPTION2:`We are a more than 2 decades old company, passing the legacy of food & agriculture to generations. Shubham Nutri Foods is a joint venture of Ganesh Ginning Factory(1998) & Shubham Foods(2021). Both the parent companies have vast experience & are running successfully, setting new records every day. To explore one more vertical in the same segment, Shubham Nutri Food was brought into existence in the year 2022.`
+}
