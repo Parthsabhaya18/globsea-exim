@@ -7,6 +7,8 @@
     --color-navigation: #0e1d34E6 !important;
     --color-white: #FFFFFF !important;
     --color-offWhite: #FFFFFF99 !important;
+    --color-text: #001973 !important;
+    --color-brown: #873c3c;
 
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
     --font-primary: "Inter", sans-serif !important;
@@ -15,17 +17,16 @@
     --font-ex-small: 12px !important;
     --font-md-small: 14px !important;
     --font-lg-small: 16px !important;
-    --font-medium: 16px !important;
-    --font-large: 18px !important;
+    --font-medium: 18px !important;
+    --font-large: 20px !important;
     --font-ex-large: 22px !important;
 
-    
+    --font-family:'inter', 'sans-serif' !important;
   }
 
 body {
-    width: 100vw;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     margin: 0px;
     padding: 0px;
-    font-family: 'inter', 'sans-serif';
+    font-family:var(--font-family) ;
   }

@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar';
 import { translate } from '../../utilies/translate';
 const Hero = () =>{
     return(
-        <Box sx={{backgroundImage: `url('/assests/hero-bg.png')`, backgroundSize:'cover',
+        <Box sx={{background:'var(--color-secondary)',backgroundImage: `url('/assests/hero-bg.png')`, backgroundSize:'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',}}>
         <Navbar/>

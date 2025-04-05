@@ -6,6 +6,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import "./Navbar.css"; // Using global CSS file
 import Images from '@/utilies/Images.js'
 import Image from "next/image.js";
+import CustomButton from '../../common/CustomButton.js'
+import SvgIcon from "../../icons/SvgIcon";
+import { Icons } from '../../icons/Icons.js'
 const NAV_LINKS = [
   { name: "Home", path: "#" },
   { name: "Our Products", path: "#" },
@@ -38,26 +41,39 @@ const Navbar = () => {
       <Box className={`navbar-main ${isSticky && !mobileOpen ? "sticky" : ""}`}>
          <Image className="logo" src={Images.LOGO} alt="couldn't load" /> 
         {!mobileOpen && (
-          <IconButton className="menu-icon" onClick={() => setMobileOpen(true)}>
-            <MenuIcon />
-          </IconButton>
+          // <IconButton className="menu-icon" onClick={() => setMobileOpen(true)}>
+          //   <MenuIcon />
+          // </IconButton>
+        <>
+        <Icons/>
+          <SvgIcon id="menu"   className="menu-icon"/>
+        </>
+          
         )}
         {/* Desktop Navbar */}
         <Box className="navbar-list">
-          {NAV_LINKS.map(({ name }) => (
-            <Link
-              key={name}
-              className={`navbar-link ${active === name ? "active" : ""}`}
-              onClick={(e) => handleLinkClick(e, name)}
-            >
-              {name}
-            </Link>
-          ))}
-          <Button className="contact-button" title="Contact Us!">
-            Contact Us!
-          </Button>
-        </Box>
+        <Box sx={{ display: 'flex', gap: '20px', fontFamily: 'var(--font-primary)' }}>
+  {NAV_LINKS.map(({ name }) => (
+    <Link
+      key={name}
+      onClick={(e) => handleLinkClick(e, name)}
+      style={{
+        textDecoration: 'none',
+        color: active === name ? 'var(--color-white)' : 'var(--color-offWhite)',
+        fontSize: '16px',
+        padding: '10px',
+        cursor: 'pointer',
+        borderBottom: active === name ? '2px solid var(--color-primary)' : 'none',
+      }}
+    >
+      {name}
+    </Link>
+  ))}
 
+</Box>
+    <CustomButton title='Contact Us!' />
+
+</Box>
         {/* Mobile Drawer Menu */}
         <Drawer anchor="right" open={mobileOpen} onClose={() => setMobileOpen(false)} >
           <Box className="mobile-menu">

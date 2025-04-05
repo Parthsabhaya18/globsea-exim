@@ -1,11 +1,12 @@
 import Hero from '../pages/Hero/Hero.jsx'
-import { Box } from '@mui/material';
+import Availability from '../pages/Availability/DetailsManagment.jsx'
 export default function Home() {
   return (
-    <Box sx={{background:'var(--color-secondary)',}}>
+    <>
     {/* <Navbar/>    */}
-    <Hero/>
-    </Box>
+      <Hero/>
+      <Availability/>
+    </>
      
   );
 }

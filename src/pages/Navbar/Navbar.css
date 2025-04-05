@@ -12,19 +12,12 @@
 }
 .navbar-main.sticky {
     height: 90px;
-    background: var(--color-navigation) !important;
+    background: var(--color-navigation);
     transition: all 0.5s ease;
 }
 .logo {
     height:100px;
     width:153px;
-}
-.navbar-link{
-    text-decoration: none !important;
-    color: var(--color-offWhite) !important;
-    font-size: 16px !important;
-    padding: 10px !important;
-    cursor: pointer;
 }
 .navbar-list{
     display: flex;
@@ -33,16 +26,7 @@
     font-family:var(--font-primary) ;
     
 }
-.navbar-link.active {
-    color: var(--color-white) !important;
-    border-bottom: 2px solid var( --color-primary) !important; 
-  }
 
-.contact-button{
-    padding: 8px 20px !important;
-    background-color: var(--color-primary) !important;
-    color: var(--color-white) !important;
-}
 
 .menu-icon{
     display: none !important;
@@ -97,9 +81,9 @@
 }
 @media screen and (max-width: 400px) {
     .mobile-menu {
-        width: 100vw !important; /* Full screen width on small devices */
+        width: 100vw !important; 
     }
-    .menu-icon {
+    .menu-icon {    
         display: block !important;
         color: var(--color-white) !important;
     }
