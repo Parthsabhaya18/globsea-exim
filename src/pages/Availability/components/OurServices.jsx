@@ -3,6 +3,7 @@ import TypographyText from "@/common/Text";
 import { OurServicesJson } from "@/utilies/UtilisJson";
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import Image from "next/image";
+import { useState } from "react";
 
 const OurServices = () =>{
     const [activeIndex, setActiveIndex] = useState(null);
