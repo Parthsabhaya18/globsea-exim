@@ -5,7 +5,6 @@ import { Box, Typography } from '@mui/material';
 
 const TypographyText = ({
   children,
-  variant = 'body1',
   color = 'var(--color-text)',
   fontWeight = 'normal',
   sx,
