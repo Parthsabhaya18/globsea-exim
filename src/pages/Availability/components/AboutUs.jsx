@@ -8,7 +8,7 @@ import { translate } from "@/utilies/translate";
 const AboutUs = () => {
   return (
     <Box className="main">
-      <TypographyText variant="h1">About us</TypographyText>
+      <TypographyText >About us</TypographyText>
 
       <Box
         className="about-us"

@@ -14,7 +14,7 @@ const OurLocationAvailability = () =>{
     return(
         <>
             <Box className="main">
-                <TypographyText variant="h1" >
+                <TypographyText>
                         {translate.OurLocationAvailability}
                 </TypographyText>   
                <Box className="card-main">

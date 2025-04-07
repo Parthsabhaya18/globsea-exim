@@ -14,24 +14,29 @@
 ]
 export default LocationAndAvailabilty;
 
+import ourSerices1 from '../../public/assests/our-service-1.jpg'
+import ourSerices2 from '../../public/assests/our-service-2.jpg'
+import ourSerices3 from '../../public/assests/our-service-3.jpg'
+import ourSerices4 from '../../public/assests/our-service-4.jpg'
+
 export const OurServicesJson = [
     {
-        image: require('../../public/assests/our-service-1.jpg'),
+        image: ourSerices1,
         name: 'CUSTOMS CLEARANCE ASSISTANCE',
         desc: 'Ensure smooth transit of goods across borders with our expert assistance in customs clearance procedures.'
     },
     {
-        image: require('../../public/assests/our-service-2.jpg'),
+        image: ourSerices2,
         name: 'PRODUCT SOURCING AND QUALITY ASSURANCE',
         desc: 'Source high-quality products from reliable manufactures and ensure compliance with international quality standars.'
     },
     {
-        image: require('../../public/assests/our-service-3.jpg'),
+        image: ourSerices3,
         name: 'LOGISTICS AND SUPPLY CHAIN MANAGEMENT',
         desc: 'Optimize delivery timelines and reduce costs with our end-to-end logistics solutions, including warehousing, transportaion, and supply chain managment.'
     },
     {
-        image: require('../../public/assests/our-service-4.jpg'),
+        image: ourSerices4,
         name: 'CUSTOMIZED PACKAGING SOLUTIONS',
         desc: 'Protect goods during transit and enhance brand visiblity with our customized packaging solutions tailored to your specific requirements.'
     },
