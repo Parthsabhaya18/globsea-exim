@@ -4,6 +4,7 @@ import './DetailsManagment.css';
 import OurLocationAvailability from "./components/OurLocationAvailability.jsx";
 import OurServices from "./components/OurServices.jsx";
 import AboutUs from "./components/AboutUs.jsx";
+import ContactUs from "./components/ContactUs.jsx";
 const Availability = () =>{
 
     return(
@@ -11,6 +12,7 @@ const Availability = () =>{
            <OurLocationAvailability/>
            <AboutUs/>
            <OurServices/>
+           <ContactUs/>
         </>
     )
 }
