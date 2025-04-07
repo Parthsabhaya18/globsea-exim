@@ -1,3 +1,4 @@
+'use client'
 import { Box } from '@mui/material';
 import '../Hero/Hero.css'
 import heroImage from '../../../public/assests/hero-img.png'

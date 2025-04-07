@@ -1,8 +1,8 @@
-import { Box, Card, CardContent, Typography } from "@mui/material";
-import TypographyText from "../../common/Text.js";
-import LocationAndAvailabilty from '../../utilies/UtilisJson.js'
+
+'use client'
 import './DetailsManagment.css';
 import OurLocationAvailability from "./components/OurLocationAvailability.jsx";
+import OurServices from "./components/OurServices.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 const Availability = () =>{
 
@@ -10,6 +10,7 @@ const Availability = () =>{
         <>
            <OurLocationAvailability/>
            <AboutUs/>
+           <OurServices/>
         </>
     )
 }

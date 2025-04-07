@@ -1,4 +1,5 @@
 // TypographyText.js
+'use client'
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
@@ -36,7 +37,7 @@ const TypographyText = ({
         {children}
       </Typography>
     <Typography
-      variant={variant}
+      variant='div'
       color={color}
       fontWeight={fontWeight}
       sx={{...sx,position:'relative',zIndex:1,fontSize:'32px',fontWeight:'bold', textAlign: 'center'}}

@@ -1,3 +1,4 @@
+'use client'
 import { Box, Typography } from "@mui/material";
 import TypographyText from "../../../common/Text";
 import aboutUs from "../../../../public/assests/about-us-photo.jpg";
@@ -6,7 +7,7 @@ import { translate } from "@/utilies/translate";
 
 const AboutUs = () => {
   return (
-    <Box className="about-us-main">
+    <Box className="main">
       <TypographyText variant="h1">About us</TypographyText>
 
       <Box
