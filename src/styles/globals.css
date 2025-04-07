@@ -10,6 +10,7 @@
     --color-text: #001973 !important;
     --color-brown: #8b0000 !important;
     --color-imageBackground: #f9f9f9 !important; 
+    --color-contact-us: #333333 !important;
 
     --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
     --font-primary: "Inter", sans-serif !important;
@@ -21,6 +22,7 @@
     --font-medium: 18px !important;
     --font-large: 20px !important;
     --font-ex-large: 22px !important;
+    --font-ex-m-large:24px !important;
     --font-title: 28px !important;
 
     --font-family:'inter', 'sans-serif' !important;
@@ -31,4 +33,6 @@ body {
     margin: 0px;
     padding: 0px;
     font-family:var(--font-family) ;
+    scroll-behavior: smooth;
   }
+  

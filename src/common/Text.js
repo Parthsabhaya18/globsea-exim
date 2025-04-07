@@ -37,7 +37,7 @@ const TypographyText = ({
         {children}
       </Typography>
     <Typography
-      variant={variant}
+    component='div'
       color={color}
       fontWeight={fontWeight}
       sx={{...sx,position:'relative',zIndex:1,fontSize:'32px',fontWeight:'bold', textAlign: 'center'}}
