@@ -6,6 +6,8 @@
   gap:5;
   margin:70px 0px ;
 }
+
+/* Our Location and availability  */
 .card-main{
   display: flex;
   justify-content: center;
@@ -42,4 +44,55 @@
     flex-direction: column;
     align-items: center;
     gap: 13;
+}
+@media screen and (max-width: 376px) {
+  .Card-box{
+      padding: 10px 0px;
+  }
+}
+
+/* about us  */
+.about-us-main {
+  padding: 0 30px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 456px;
+  aspect-ratio: 1 / 1;
+  border-radius: 15px !important;
+  background-color: var(--color-imageBackground);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image {
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 5%;
+}
+
+.about-us-title1,
+.about-us-title2 {
+  font-size: clamp(1.5rem, 2vw, 2rem) !important;
+  font-weight: 700 !important;
+}
+
+.about-us-text,
+.about-us-text2 {
+  font-size: clamp(1rem, 1.5vw, 1.125rem) !important;
+}
+
+.about-us-text2 {
+  font-style: italic;
+  font-weight: 500 !important;
+}
+
+.about-us {
+  margin-top: 2rem;
 }

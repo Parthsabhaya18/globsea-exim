@@ -4,6 +4,7 @@ import TypographyText from "../../../common/Text";
 import LocationAndAvailabilty from '../../../utilies/UtilisJson.js'
 import '../DetailsManagment.css'
 import { useState } from "react";
+import { translate } from "@/utilies/translate";
 const OurLocationAvailability = () =>{
     const [clickedCardIndex, setClickedCardIndex] = useState(null);
     const isMobile = useMediaQuery('(max-width:768px)');
@@ -15,8 +16,8 @@ const OurLocationAvailability = () =>{
     return(
         <>
             <Box className="location-main">
-                <TypographyText variant="h1" sx={{fontSize:'32px',fontWeight:'bold', textAlign: 'center'}} >
-                        Our Location & Availability
+                <TypographyText variant="h1" >
+                        {translate.OurLocationAvailability}
                 </TypographyText>   
                <Box className="card-main">
                {
