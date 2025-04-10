@@ -1,78 +1,144 @@
-.Footer-Main{
-    background-color: var( --color-secondary) !important;
-    color: var(--color-white);
-    padding: 30px 60px !important;
-}
-@media screen and (max-width:425px) {
-  .Footer-Main{
-    padding: 30px !important;
-  }
+.Footer-Main {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
-.footer-header{
-   font-size: var(--font-title) !important;
-   font-weight: bold !important;
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  padding: 40px 60px !important;
+  margin: 0 auto;
 }
-.footer-header-desc{
-    max-width: 450px;
-    font-size: var(  --font-md-small);
-    white-space: 'normal';
-    word-break: 'break-word';
-    text-align  : 'justify';
+
+.footer-left {
+  max-width: 400px;
+  flex: 1;
+  min-width: 280px;
 }
-.company-desc{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
+.footer-middle {
+  display: flex;
+  gap: 10px;
+  gap: 60px;
+  flex: 2;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 280px;
 }
-.footer-child-title{
-    font-size: var(--font-lg-small) !important;
-    font-weight: bold !important;
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-.footer-child-menu{
-    font-size: var(--font-lg-small) !important;
-    color: var(--color-offWhite) !important;
+
+.footer-right {
+  max-width: 300px;
+  flex: 1;
+  min-width: 280px;
 }
-.userful-link{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+
+.footer-header {
+  font-size: var(--font-title) !important;
+  font-weight: bold !important;
 }
-.footer-header-contactus{
-    max-width: 300px;
-    font-size: var(  --font-md-small);
-    white-space: 'normal';
-    word-break: 'break-word';
-    text-align  : 'justify';
+
+.footer-child-title {
+  font-size: var(--font-lg-small) !important;
+  font-weight: bold !important;
+}
+
+.footer-child-menu {
+  font-size: var(--font-lg-small) !important;
+  color: var(--color-offWhite) !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+.footer-child-menu:hover {
+  color: var(--color-white) !important;
+}
+
+.footer-header-desc,
+.footer-header-contactus {
+  font-size: var(--font-md-small) !important;
+}
+
+.footer-social-icons {
+  display: flex;
+
+  gap: 10px;
+  margin-top: 12px;
 }
 
 .footer-bottom-text {
-    text-align: center;
-    width: 100%;
-    margin-top: 20px !important;
-  }
-  
-  @media screen and (min-width: 600px) and (max-width: 1200px) {
-    .Footer-Main {
-      padding: 40px !important;
-    }
-    .company-desc{
-      width: 100%;
-      display: flex !important;
-      text-align: center;
-      align-items: center;
-    }
-  }
-  @media screen and (min-width:1200px){
-    .three-sec{
-      width: auto !important;
-      
-    }
-    .footer-line {
-      display: flex !important;
-      justify-content: center !important;
-    }
-  }
-  
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
 
-  
+/* Responsive tweaks */
+@media screen and (max-width: 1100px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-social-icons{
+    justify-content: center;
+  }
+  .footer-left,
+  .footer-right {
+    text-align: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .footer-middle {
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer-list {
+    align-items: center;
+  }
+
+  .footer-bottom-text {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .footer-middle {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-list {
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-wrapper{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0; 
+  }
+}
+@media screen and (max-width:420px) {
+  .footer-wrapper{
+    padding: 40px 5px !important;
+  }
+  .footer-header{
+    font-size: var( --font-ex-large) !important;
+  }
+}

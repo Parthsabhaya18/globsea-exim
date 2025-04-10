@@ -57,7 +57,7 @@ const ContactUs = () => {
     },
   ];
   return (
-    <Box className="main">
+    <Box className="main" id='contactUs'>
       <TypographyText>Contact us</TypographyText>
      <Box className="container-main" >
      <Box className="Contact-us" >
@@ -100,7 +100,7 @@ const ContactUs = () => {
           title="Send Enquiry"
           style={{
             borderRadius: "20px",
-            padding: "10px 20px",
+            padding: "5px 20px",
             backgroundColor: "var(--color-text)",
             fontWeight: "bold",
             fontSize: "var(--font-large)",

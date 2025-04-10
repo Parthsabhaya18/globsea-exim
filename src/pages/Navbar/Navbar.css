@@ -1,93 +1,115 @@
-
-.navbar-main{
-    height: 110px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;left: 0;right: 0;
-    z-index: 9999;
-    transition: all 0.5s ease; 
-    padding:0px 60px;
+.navbar-main {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  padding: 0px 60px;
 }
 .navbar-main.sticky {
-    height: 90px;
-    background: var(--color-navigation);
-    transition: all 0.5s ease;
+  height: 90px;
+  background: var(--color-navigation);
+  transition: all 0.5s ease;
 }
 .logo {
-    height:100px;
-    width:153px;
+  height: 100px;
+  width: 153px;
 }
-.navbar-list{
-    display: flex;
-    gap: 20px;
-    font-size: 16px;
-    
+.navbar-list {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
 }
 
-
-.menu-icon{
-    display: none !important;
+.menu-icon {
+  display: none !important;
 }
 
 .mobile-menu {
-    display: none;
-    background-color: var(--color-navigation) !important;
-    width:40vw !important;
-    height: 100vh !important;
-    padding: 20px !important;
+  display: none;
+  background-color: var(--color-navigation) !important;
+  /* width: 40vw !important; */
+  height: 100vh !important;
+  padding: 20px !important;
+  transition: transform 1s ease, opacity 0.4s ease;
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.mobile-menu.slide-down {
+  animation: slideDown 0.4s ease forwards;
 }
 
 .close-button {
-    color: var(--color-white) !important;
+  color: var(--color-white) !important;
 }
 
 /* adjucet */
 @media screen and (max-width: 1080px) {
-    .navbar-list {
-        display: none !important;
-    }
-    .navbar-main{
-        z-index: 1;
-        padding: 0px 30px;
-    }
-    .menu-icon {
-        display: block !important;
-        color: var(--color-white) !important;
-    }
-    .mobile-menu{
-        display: block;
-    }
-    
-    .navbar-link{
-        color: var(--color-white) !important;
-    }
-   
-   
+  .navbar-list {
+    display: none !important;
+  }
+  .navbar-main {
+    z-index: 1;
+    padding: 0px 30px;
+  }
+  .menu-icon {
+    display: block !important;
+    color: var(--color-white) !important;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+
 }
 
 @media screen and (max-width: 600px) {
-    .menu-icon {
-        display: block !important;
-        color: var(--color-white) !important;
-    }
+  .menu-icon {
+    display: block !important;
+    color: var(--color-white) !important;
+  }
 
-    .mobile-menu {
-        width: 70vw !important;
-       display: block;
-    }
+  .mobile-menu {
+    width: 70vw !important;
+    display: block;
+  }
 }
 @media screen and (max-width: 400px) {
-    .mobile-menu {
-        width: 100vw !important; 
-    }
-    .menu-icon {    
-        display: block !important;
-        color: var(--color-white) !important;
-    }
+  .mobile-menu {
+    width: 100vw !important;
+  }
+  .menu-icon {
+    display: block !important;
+    color: var(--color-white) !important;
+  }
 
-    .mobile-menu {
-       display: block;
-    }
+  .mobile-menu {
+    display: block;
+  }
 }
+@media (min-width: 1080px) {
+    .MuiDrawer-root .MuiBackdrop-root {
+      background-color: transparent !important;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .navbar-main{
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0; 
+    }
+  }

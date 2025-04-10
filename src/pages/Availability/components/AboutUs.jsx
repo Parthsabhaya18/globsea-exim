@@ -7,7 +7,7 @@ import { translate } from "@/utilies/translate";
 
 const AboutUs = () => {
   return (
-    <Box className="main">
+    <Box className="main" id="aboutUs">
       <TypographyText >About us</TypographyText>
 
       <Box
@@ -32,7 +32,7 @@ const AboutUs = () => {
           />
         </Box>
 
-        <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
+        <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
           <Typography className="about-us-title1" sx={{ mb: 2,color:'var(--color-brown)' }}>
             {translate.ABOUTUSTITLE}
           </Typography>

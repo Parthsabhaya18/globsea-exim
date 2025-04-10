@@ -6,13 +6,9 @@ import Image from "next/image";
 import { useState } from "react";
 
 const OurServices = () =>{
-    const [activeIndex, setActiveIndex] = useState(null);
     
-        const handleCardClick = (index) => {
-          setActiveIndex(index === activeIndex ? null : index);
-        };
     return(
-        <Box className='main'>
+        <Box className='main' id='ourServices'>
             <TypographyText>
             Our Services
             </TypographyText>
@@ -20,7 +16,7 @@ const OurServices = () =>{
                 {
                     OurServicesJson.map((item,index)=>{
                         return(
-                            <Card key={index} className={`service-card ${activeIndex === index ? 'active' : ''}`} onClick={() => handleCardClick(index)}>
+                            <Card key={index} className={`service-card `}>
                                 <Box className="service-image-wrapper">
                                     <Image
                                     src={item.image}

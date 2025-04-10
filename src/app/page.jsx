@@ -3,6 +3,7 @@ import Hero from '../pages/Hero/Hero.jsx'
 import Availability from '../pages/Availability/DetailsManagment.jsx'
 import Footer from '../pages/Footer/Footer.jsx'
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import Layout from '../pages/Layout/Layout.jsx'
 import theme from '../styles/theme.js'
 export default function Home() {
   return (
@@ -13,11 +14,10 @@ export default function Home() {
     // </>
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <main >
+      <Layout >
         <Hero/>
         <Availability/>
-        <Footer/>
-      </main>
+      </Layout>
     </ThemeProvider>
      
   );

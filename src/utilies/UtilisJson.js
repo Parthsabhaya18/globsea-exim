@@ -55,9 +55,9 @@ export const footerData = {
       // EmailExport :' export@jvsonsexport.com'
     },
     links: [
-      { label: "Home", href: "#" },
-      { label: "About us", href: "#" },
-      { label: "Services", href: "#" },
+      { label: "Home", href: "#hero" },
+      { label: "About us", href: "#aboutUs" },
+      { label: "Services", href: "#ourServices" },
       { label: "Products", href: "#" },
     ],
     services: [
