@@ -10,7 +10,7 @@ const OurServices = () =>{
     return(
         <Box className='main' id='ourServices'>
             <TypographyText>
-            Our Services
+            OUR SERVICES
             </TypographyText>
             <Box className="services-container">
                 {

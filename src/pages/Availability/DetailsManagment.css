@@ -226,3 +226,77 @@
   }
    
 }
+
+/* testimonial  */
+
+/* DetailsManagment.css */
+.testimonial-wrapper {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+color: var(--color-white);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--background); /* Dark overlay */
+  z-index: 1;
+}
+
+.testimonial-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.testimonial-slide {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.quote-text {
+  line-height: 1.6 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+.testimonial-title{
+  font-size: var(--font-large) !important;
+  font-weight: bold !important;
+  color: var(--color-white);
+}
+.testomonial-subtitle{
+  font-size: var( --font-md-small) !important;
+  color: var(--color-offWhite);
+}
+/* Carousel Dots */
+.testimonial-wrapper .slick-dots {
+  position: relative;
+  top: 30px;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  z-index: 2;
+}
+
+.testimonial-wrapper .slick-dots li button:before {
+  font-size: 12px;
+  color: white;
+  opacity: 0.75;
+}
+
+.testimonial-wrapper .slick-dots li.slick-active button:before {
+  color: var(--color-white);
+  opacity: 1;
+}

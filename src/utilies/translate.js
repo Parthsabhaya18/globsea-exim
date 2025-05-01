@@ -17,5 +17,5 @@ export const translate = {
             importing goods or expanding your market through exports, our team
             of experts is here to assist you every step of the way.`,
             ABOUTSECONDDES1:'Largest Global Exporter And Importer',
-          OurLocationAvailability  :'Our Location & Availability',
+          OurLocationAvailability  :'OUR LOCATION & AVAILABILITY',
 }

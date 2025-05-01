@@ -10,7 +10,7 @@ const Hero = () =>{
         <Box id="hero" sx={{background:'var(--color-secondary)',backgroundImage: `url('/assests/hero-bg.png')`, backgroundSize:'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',paddingBottom:5}}>
-      <Navbar/>
+        <Navbar/>
         <Box className="hero-main">
             <Box className="hero-text-container">
                 <h1>{translate.GLOBSEA_EXIM}</h1>

@@ -20,8 +20,8 @@
 .hero-text-container p{
     color: #FFFFFFCC;
     width: 86%;
-    text-align: justify;
     font-size: 1.1rem;
+    text-align: left;
 }
 .hero-image{
     max-width: 500px !important;

@@ -58,7 +58,7 @@ const ContactUs = () => {
   ];
   return (
     <Box className="main" id='contactUs'>
-      <TypographyText>Contact us</TypographyText>
+      <TypographyText>CONTACT US</TypographyText>
      <Box className="container-main" >
      <Box className="Contact-us" >
         <Typography
@@ -76,7 +76,6 @@ const ContactUs = () => {
             flexDirection: "column",
             gap: "15px",
             width: "100%",
-            padding: "0px 30px",
           }}
         >
           {ContactUsjson.map((item, index) => {

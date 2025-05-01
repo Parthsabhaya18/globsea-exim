@@ -13,6 +13,8 @@
 }
 .navbar-main.sticky {
   height: 90px;
+  position: fixed;
+  margin: 0;
   background: var(--color-navigation);
   transition: all 0.5s ease;
 }

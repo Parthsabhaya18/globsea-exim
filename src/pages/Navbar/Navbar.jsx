@@ -1,19 +1,10 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import {
-  Box,
-  Button,
-  Link,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-} from "@mui/material";
+import { Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import "./Navbar.css"; // Using global CSS file
+import Image from "next/image";
 import Images from "@/utilies/Images.js";
-import Image from "next/image.js";
 import CustomButton from "../../common/CustomButton.js";
 
 const NAV_LINKS = [
@@ -29,14 +20,24 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // Scroll event listener for sticky navbar
-  useEffect(() => {
-    const handleScroll = () => setIsSticky(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+useEffect(() => {
+  const handleScroll = () => setIsSticky(window.scrollY > 0);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
-  // Handle link clicks
+useEffect(() => {
+  if (mobileOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [mobileOpen]);
+
+
   const handleLinkClick = useCallback((e, linkName) => {
     e.preventDefault();
     setActive(linkName);
@@ -45,92 +46,108 @@ const Navbar = () => {
 
   return (
     <>
-      <Box className={`navbar-main ${isSticky && !mobileOpen ? "sticky" : ""}`}>
-        <Image className="logo" src={Images.LOGO} alt="couldn't load" />
-        {!mobileOpen && (
-          <IconButton className="menu-icon" onClick={() => setMobileOpen(true)}>
-            <MenuIcon />
-          </IconButton>
-        )}
-        {/* Desktop Navbar */}
-        <Box className="navbar-list">
-          <Box
-            sx={{
-              display: "flex",
-              gap: "20px",
-              fontFamily: "var(--font-primary)",
-            }}
-          >
-            {NAV_LINKS.map((item,index) => (
-              <Link
-              href={item.path}
-                key={index}
-                onClick={(e) => handleLinkClick(e, item.name)}
-                style={{
-                  textDecoration: "none",
-                  color:
+      <div
+        className={`w-full z-[9999] transition-all duration-500 ${
+          isSticky && !mobileOpen
+            ? "fixed top-0 bg-[var(--color-navigation)] h-[90px]"
+            : "sticky top-0 bg-[var(--color-navigation)] h-[110px]"
+        }`}
+      >
+      <div className="w-full max-w-[1200px] xl:mx-auto xl:px-6 px-4 md:px-6 flex justify-between items-center h-full">
+          <Image
+            src={Images.LOGO}
+            alt="Logo"
+            className="w-[153px] h-[100px]"
+          />
+
+          {/* Desktop Nav */}
+          <div className="hidden lg:flex gap-6 items-center">
+            <div className="flex gap-5 font-[var(--font-primary)]">
+              {NAV_LINKS.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.path}
+                  onClick={(e) => handleLinkClick(e, item.name)}
+                  className={`text-[16px] py-2 px-1 border-b-2 ${
                     active === item.name
-                      ? "var(--color-white)"
-                      : "var(--color-offWhite)",
-                  fontSize: "16px",
-                  padding: "10px",
-                  cursor: "pointer",
-                  borderBottom:
-                    active === item.name ? "2px solid var(--color-primary)" : "none",
-                }}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </Box>
-          <CustomButton title="Contact Us!" />
-        </Box>
-        {/* Mobile Drawer Menu */}
-        <Drawer
-          anchor="right"
-          open={mobileOpen}
-          onClose={() => setMobileOpen(false)}
-          sx={{overflow:'auto'}}
-        >
-          <Box
-            className={`mobile-menu ${mobileOpen ? "slide-down" : ""}`}
-            sx={{
-              width: { xs: "100vw", sm: "45vw", md: "40vw" },
-            }}
-          >
-           <Box sx={{display:'flex',justifyContent:'flex-end'}}>
-           {mobileOpen && (
-              <IconButton
-                onClick={() => setMobileOpen(false)}
-                className="close-button"
-              >
-                <CloseIcon />
-              </IconButton>
-            )}
-           </Box>
-            <List sx={{display:'flex',flexDirection:'column',gap:2.5,margin:2}}>
-              {NAV_LINKS.map(({ name }) => (
-                <ListItem
-                  key={name}
-                  className="navbar-link"
-                  sx={{
-                    color:
-                      active === name
-                        ? "var(--color-white)"
-                        : "var(--color-offWhite)",
-                    fontSize: "16px",
-                    padding:0
-                  }}
-                  onClick={(e) => handleLinkClick(e, name)}
+                      ? "text-[var(--color-white)] border-[var(--color-primary)]"
+                      : "text-[var(--color-offWhite)] border-transparent"
+                  } transition-colors`}
                 >
-                  {name}
-                </ListItem>
+                  {item.name}
+                </a>
               ))}
-              <CustomButton title="Contact Us!" />
-            </List>
-          </Box>
-        </Drawer>
-      </Box>
+            </div>
+            <CustomButton title="Contact Us!" />
+          </div>
+
+          {/* Mobile Menu Icon */}
+          {!mobileOpen && (
+            <button
+              className="lg:hidden text-[var(--color-white)]"
+              onClick={() => setMobileOpen(true)}
+            >
+              <MenuIcon />
+            </button>
+          )}
+        </div>
+
+        {/* Mobile Drawer */}
+        <Drawer
+        anchor="right"
+        open={mobileOpen}
+        onClose={() => setMobileOpen(false)}
+        ModalProps={{
+          keepMounted: true,
+        }}
+        sx={{
+          zIndex: 13000,
+          "& .MuiDrawer-paper": {
+          
+            width: "100vw",
+            maxWidth: "400px",
+            height: "100vh",
+            backgroundColor: "var(--color-navigation)",
+            transition: "all 0.8s ease-in-out",
+            overflowY: "auto",
+          },
+        }}
+      >
+  <div
+    className={`h-full p-6 ${
+      mobileOpen ? "animate-slideDown" : ""
+    }`}
+  >
+    <div className="flex justify-end">
+      <button
+        onClick={() => setMobileOpen(false)}
+        className="text-[var(--color-white)]"
+      >
+        <CloseIcon />
+      </button>
+    </div>
+    <ul className="flex flex-col gap-6 mt-6 ml-2">
+      {NAV_LINKS.map(({ name }) => (
+        <li
+          key={name}
+          onClick={(e) => handleLinkClick(e, name)}
+          className={`text-[16px] cursor-pointer ${
+            active === name
+              ? "text-[var(--color-white)]"
+              : "text-[var(--color-offWhite)]"
+          }`}
+        >
+          {name}
+        </li>
+      ))}
+      <CustomButton title="Contact Us!" />
+    </ul>
+  </div>
+</Drawer>
+
+      </div>
+
+    
     </>
   );
 };
